@@ -25,8 +25,10 @@ const Button = ({
     {
       'bg-primary text-foreground-secondary hover:bg-primary-muted':
         variant === 'primary',
-      'bg-accent text-foreground-secondary': variant === 'accent',
-      'bg-accent text-accent': variant === 'outline',
+      'bg-accent text-foreground-secondary hover:bg-accent-muted active:bg-accent-dark':
+        variant === 'accent',
+      'bg-accent text-accent hover:bg-accent-muted active:bg-accent-dark':
+        variant === 'outline',
       'bg-red text-red': variant === 'danger',
       'px-3 h-10 text-sm': size === 'sm',
       'px-6 h-11 text-sm': size === 'md',

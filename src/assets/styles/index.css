@@ -18,12 +18,17 @@
   --color-input: #f9f9f9;
 
   --color-accent: #4a90e2;
+  --color-accent-muted: #357abd;
+  --color-accent-dark: #2e6da4;
   --color-danger: #d90429;
   --color-green: #4dd222;
 
   /* Font size and line height */
-  --text-xs: 12px;
-  --text-xs--line-height: 117%;
+  --text-xxs: 12px;
+  --text-xxs--line-height: 117%;
+
+  --text-xs: 13px;
+  --text-xs--line-height: 108%;
 
   --text-sm: 14px;
   --text-sm--line-height: 114%;
@@ -34,24 +39,12 @@
   --text-lg: 16px;
   --text-lg--line-height: 125%;
 
-  /* Font size and line height for titles */
-  --text-h-xs: 22px;
-  --text-h-xs--line-height: 120%;
-
-  --text-h-sm: 28px;
-  --text-h-sm--line-height: 100%;
-
-  --text-h-md: 28px;
-  --text-h-md--line-height: 120%;
-
-  --text-h-lg: 44px;
-  --text-h-lg--line-height: 100%;
-
-  --text-h-xl: 56px;
-  --text-h-xl--line-height: 100%;
+  --text-xl: 20px;
+  --text-xl--line-height: 120%;
 
   /* shadows */
   --shadow-auth: 0 2px 10px 0 rgba(18, 17, 19, 0.1);
+  --shadow-task: 0 2px 8px 0 rgba(18, 17, 19, 0.15);
 
   /* animate */
   /* --animate-slide-up: slideUp 0.15s cubic-bezier(0.16, 1, 0.3, 1);

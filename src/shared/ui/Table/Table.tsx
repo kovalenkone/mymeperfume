@@ -15,7 +15,7 @@ const Table = ({
     <table
       {...props}
       className={twMerge(
-        'border-border-muted table-auto border-separate border-spacing-0 overflow-hidden rounded-lg border',
+        'w-full table-fixed border-separate border-spacing-x-0 border-spacing-y-2 overflow-hidden',
         className,
       )}
     >
@@ -28,7 +28,11 @@ const TableHead = ({
   children,
   ...props
 }: PropsWithChildren<ComponentPropsWithoutRef<'thead'>>) => {
-  return <thead {...props}>{children}</thead>
+  return (
+    <thead {...props} className='overflow-hidden rounded-md'>
+      {children}
+    </thead>
+  )
 }
 
 const TableBody = ({
@@ -57,7 +61,7 @@ const TableCell = ({
     <td
       {...props}
       className={twMerge(
-        'border-border-muted border-t p-2 text-left align-top text-sm not-last:border-e sm:p-2.5',
+        'bg-background-secondary border-border border-s border-t border-b px-5 py-4 first:rounded-l-lg last:rounded-r-lg last:border-e',
         className,
       )}
     >
@@ -75,7 +79,7 @@ const TableCellHead = ({
     <th
       {...props}
       className={twMerge(
-        'border-border-muted bg-grey h-9 px-2 text-left text-sm font-bold not-last:border-e sm:h-11 sm:px-2.5',
+        'border-background bg-primary-muted text-foreground-secondary font-primary h-[52px] px-5 text-left text-lg font-medium not-last:border-e first:rounded-tl-lg last:rounded-tr-lg',
         className,
       )}
     >

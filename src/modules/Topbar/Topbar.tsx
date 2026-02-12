@@ -1,6 +1,5 @@
 import { ExitIcon } from '@/shared/icons/ExitIcon'
 import { UserIcon } from '@/shared/icons/UserIcon'
-import { Text } from '@/shared/ui/Text'
 import { Link } from 'react-router-dom'
 
 const Topbar = () => {
@@ -13,10 +12,8 @@ const Topbar = () => {
               <UserIcon />
             </div>
             <div className='flex min-w-[170px] flex-col gap-1'>
-              <Text size='lg'>Samuel Dupont</Text>
-              <Text size='sm' color='muted'>
-                Manager
-              </Text>
+              <p className='text-lg'>Samuel Dupont</p>
+              <p className='text-muted text-sm'>Manager</p>
             </div>
           </div>
           <Link to={''}>
