@@ -1,36 +1,30 @@
 import clsx from 'clsx'
 import type { ElementType, PropsWithChildren } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 interface ITextProps extends PropsWithChildren {
   as?: 'span' | 'p'
-  color?: 'black-85' | 'black-50' | 'black-25' | 'black-10' | 'black-05'
+  color?: 'primary' | 'secondary' | 'muted'
   weight?: 'regular' | 'medium' | 'semibold' | 'bold'
   size?: 'xs' | 'sm' | 'md' | 'lg'
-  mobSize?: 'xs' | 'sm' | 'md' | 'lg'
-  tightest?: boolean
   className?: string
 }
 
 const Text = ({
-  children,
   as = 'p',
-  color = 'black-85',
+  color = 'primary',
   size = 'md',
   weight = 'regular',
-  tightest = false,
-  mobSize,
+  className,
+  children,
 }: ITextProps) => {
   const Component: ElementType = as
 
-  const textStyles = clsx(
-    `text-${color} text-${size} leading-${size} font-${weight}`,
-    {
-      [`md:text-${mobSize} md:leading-${mobSize}`]: !!mobSize,
-      'tracking-tightest': tightest,
-    },
-  )
+  const textStyles = clsx(`text-${color} text-${size} font-${weight}`)
 
-  return <Component className={textStyles}>{children}</Component>
+  return (
+    <Component className={twMerge(textStyles, className)}>{children}</Component>
+  )
 }
 
 Text.displayName = 'Text'

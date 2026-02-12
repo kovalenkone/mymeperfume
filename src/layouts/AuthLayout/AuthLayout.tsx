@@ -1,24 +1,22 @@
-import { AuthBanner } from '@/shared/components/AuthBanner'
-import type { IAuthBanner } from '@/shared/types/auth-banner.type'
-import { Block } from '@/shared/ui/Block'
+import banner from '@/assets/images/auth-banner.jpg'
+import logo from '@/assets/images/auth-logo.png'
 import type { PropsWithChildren } from 'react'
 
-interface IAuthLayoutProps extends PropsWithChildren {
-  banner: IAuthBanner
-}
-
-const AuthLayout = ({ children, banner }: IAuthLayoutProps) => {
+const AuthLayout = ({ children }: PropsWithChildren) => {
   return (
-    <div className='flex flex-col-reverse gap-1 sm:gap-2.5 lg:flex-row'>
-      <div className='flex-1'>
-        <AuthBanner banner={banner} />
+    <div className='flex h-screen grid-cols-2'>
+      <div className='flex flex-1 flex-col items-center gap-10 pt-[138px]'>
+        <img src={logo} alt='ASMOS logotype' />
+        <div className='bg-background-secondary shadow-auth w-[424px] rounded-xl p-8'>
+          {children}
+        </div>
       </div>
-      <div className='flex-1'>
-        <Block className='h-full pt-10 lg:min-h-[800px]'>
-          <div className='flex h-full flex-col items-center justify-center gap-5 sm:gap-10'>
-            {children}
-          </div>
-        </Block>
+      <div className='h-full flex-1'>
+        <img
+          className='h-full w-full object-cover'
+          src={banner}
+          alt='authorization banner'
+        />
       </div>
     </div>
   )

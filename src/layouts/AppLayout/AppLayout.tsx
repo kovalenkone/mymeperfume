@@ -1,20 +1,15 @@
-import { Footer } from '@/modules/Footer'
-import { Header } from '@/modules/Header'
-import { Outlet } from 'react-router-dom'
-import { Container } from '../Container'
+import { Sidebar } from '@/modules/Sidebar'
+import { Topbar } from '@/modules/Topbar'
 
 const AppLayout = () => {
   return (
-    <Container>
-      <div className='flex flex-col gap-1 sm:gap-2.5'>
-        <Header />
-        {/* <Breadcrumbs /> */}
+    <div className='flex h-screen'>
+      <Sidebar />
+      <div className='flex flex-1 flex-col'>
+        <Topbar />
+        <main className='flex-1 overflow-auto'></main>
       </div>
-      <main className='flex-1 py-1 sm:py-2.5'>
-        <Outlet />
-      </main>
-      <Footer />
-    </Container>
+    </div>
   )
 }
 

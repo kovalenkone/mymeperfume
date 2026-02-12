@@ -1,13 +1,14 @@
 export const ClientPath = {
-  Home: "/",
+  Auth: '/auth',
+  Home: '/',
 
   // Admin
-} as const;
+} as const
 
 export const AdminPath = {
-  Users: "/admin/users",
-  Projects: "/admin/projects",
-  Archive: "/admin/archive",
-  Staff: "/admin/staff",
-  Profile: "/admin/profile",
-} as const;
+  Users: '/admin/users',
+  Projects: '/admin/projects',
+  Archive: '/admin/archive',
+  Staff: '/admin/staff',
+  Profile: '/admin/profile',
+} as const
