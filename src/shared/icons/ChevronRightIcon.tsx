@@ -17,9 +17,9 @@ const ChevronRightIcon = ({
       <path
         d='M9 4L17 12L9 20'
         stroke='currentColor'
-        stroke-width='1.5'
-        stroke-linecap='square'
-        stroke-linejoin='round'
+        strokeWidth='1.5'
+        strokeLinecap='square'
+        strokeLinejoin='round'
       />
     </svg>
   )

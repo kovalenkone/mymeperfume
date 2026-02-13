@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef } from 'react'
 
-const ArchiveIcon = ({
+const CheckIcon = ({
   className,
   ...props
 }: ComponentPropsWithoutRef<'svg'>) => {
@@ -15,7 +15,7 @@ const ArchiveIcon = ({
       {...props}
     >
       <path
-        d='M3.85714 7.25V20H20.1429V7.25M9.28571 10.7917H14.7143M2.5 3V7.25H21.5V3H2.5Z'
+        d='M4 12L10 18L20 6'
         stroke='currentColor'
         strokeWidth='1.5'
         strokeLinecap='square'
@@ -25,4 +25,4 @@ const ArchiveIcon = ({
   )
 }
 
-export { ArchiveIcon }
+export { CheckIcon }

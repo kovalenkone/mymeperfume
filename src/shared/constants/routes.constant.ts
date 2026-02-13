@@ -1,6 +1,8 @@
 export const ClientPath = {
   Auth: '/auth',
-  Home: '/',
+  Brands: '/brands',
+  Brand: (slug: string) => `/brands/${slug}`,
+  Project: (id: string) => `/project/${id}`,
 
   // Admin
 } as const

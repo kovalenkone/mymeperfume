@@ -8,7 +8,7 @@ const AppLayout = () => {
       <Sidebar />
       <div className='flex flex-1 flex-col'>
         <Topbar />
-        <main className='flex-1 overflow-auto px-10 py-6'>
+        <main className='flex-1 overflow-auto'>
           <Outlet />
         </main>
       </div>

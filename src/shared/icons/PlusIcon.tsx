@@ -14,8 +14,8 @@ const PlusIcon = ({ className, ...props }: ComponentPropsWithoutRef<'svg'>) => {
       <path
         d='M12 20V12M12 12V4M12 12H20M12 12H4'
         stroke='currentColor'
-        stroke-width='1.5'
-        stroke-linecap='square'
+        strokeWidth='1.5'
+        strokeLinecap='square'
       />
     </svg>
   )

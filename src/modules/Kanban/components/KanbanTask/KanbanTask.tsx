@@ -1,6 +1,14 @@
-const KanbanTask = () => {
+import type { TKanbanColor } from '@/shared/types/kanban-colors.type'
+
+interface IKanbanTaskProps {
+  color: TKanbanColor
+}
+
+const KanbanTask = ({ color }: IKanbanTaskProps) => {
   return (
-    <div className='bg-background-secondary shadow-task rounded-lg border-l-4'>
+    <div
+      className={`bg-background-secondary shadow-task border-status-${color} rounded-lg border-l-4`}
+    >
       <div className='border-border flex flex-col gap-3 border-b py-4 pr-6 pl-5'>
         <p className='text-md font-semibold'>Summer breeze</p>
         <div className='flex flex-col gap-2'>

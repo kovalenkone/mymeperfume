@@ -1,6 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { AppLayout } from './layouts/AppLayout'
 import { AuthPage } from './pages/AuthPage'
+import { BrandPage } from './pages/BrandPage'
+import { BrandsPage } from './pages/BrandsPage'
+import { ProjectPage } from './pages/ProjectPage'
 import { ProjectsPage } from './pages/ProjectsPage'
 import { UsersPage } from './pages/UsersPage'
 import { AdminPath, ClientPath } from './shared/constants/routes.constant'
@@ -13,6 +16,16 @@ function App() {
         <Route element={<AppLayout />}>
           <Route path={AdminPath.Users} element={<UsersPage />}></Route>
           <Route path={AdminPath.Projects} element={<ProjectsPage />}></Route>
+
+          <Route path={ClientPath.Brands} element={<BrandsPage />}></Route>
+          <Route
+            path={ClientPath.Brand(':slug')}
+            element={<BrandPage />}
+          ></Route>
+          <Route
+            path={ClientPath.Project(':id')}
+            element={<ProjectPage />}
+          ></Route>
         </Route>
       </Routes>
     </BrowserRouter>

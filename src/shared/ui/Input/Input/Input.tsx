@@ -11,7 +11,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ label, id, error, className, ...props }, ref) => {
     const inputStyles = clsx(
-      'placeholder:text-muted rounded-md border w-full bg-input px-4 h-12 border-border text-md',
+      'placeholder:text-muted rounded-md border w-full bg-input px-4 h-12 border-border text-md transition focus-visible:bg-background-secondary focus-visible:border-primary',
       { 'border-red ': !!error },
     )
 

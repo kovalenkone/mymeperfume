@@ -1,3 +1,4 @@
+import { Container } from '@/components/Container'
 import { PlusIcon } from '@/shared/icons/PlusIcon'
 import { Button } from '@/shared/ui/Button'
 import { Table } from '@/shared/ui/Table'
@@ -5,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const UsersPage = () => {
   return (
-    <div className='flex flex-col gap-8'>
+    <Container>
       <div className='flex items-center justify-between'>
         <div className='flex items-center gap-10'>
           <h1 className='text-xl font-bold uppercase'>Users</h1>
@@ -35,7 +36,7 @@ const UsersPage = () => {
           </Table.Row>
         </Table.Body>
       </Table>
-    </div>
+    </Container>
   )
 }
 
