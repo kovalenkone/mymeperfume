@@ -1,35 +1,43 @@
-import { StatusPicker } from '@/components/StatusPicker'
+import { StatusBar } from '@/components/StatusBar'
+import { TASK_STATUSES } from '@/shared/constants/task-statuses.constant'
+import { Field } from '@/shared/ui/Field'
 import { Input } from '@/shared/ui/Input/Input'
-import { ProjectField } from '../ProjectField'
+import { useState } from 'react'
 
 const ProjectAboutForm = () => {
+  const [status, setStatus] = useState('preparation')
+
   return (
     <div className='flex max-w-[996px] flex-col gap-6'>
-      <ProjectField label='Project Stage'>
-        <StatusPicker />
-      </ProjectField>
+      <Field label='Project Stage'>
+        <StatusBar
+          value={status}
+          onChange={setStatus}
+          statuses={TASK_STATUSES}
+        />
+      </Field>
       <div className='grid grid-cols-2 gap-x-[50px] gap-y-6'>
-        <ProjectField label='User First name'>
+        <Field label='User First name'>
           <Input placeholder='First name' />
-        </ProjectField>
-        <ProjectField label='User Last name'>
+        </Field>
+        <Field label='User Last name'>
           <Input placeholder='Last name' />
-        </ProjectField>
-        <ProjectField label='Responsible manager'>
+        </Field>
+        <Field label='Responsible manager'>
           <Input placeholder='Manager' />
-        </ProjectField>
-        <ProjectField label='Filling start date'>
+        </Field>
+        <Field label='Filling start date'>
           <Input placeholder='Date' />
-        </ProjectField>
-        <ProjectField label='Filling end date'>
+        </Field>
+        <Field label='Filling end date'>
           <Input placeholder='Date' />
-        </ProjectField>
-        <ProjectField label='Shipping date'>
+        </Field>
+        <Field label='Shipping date'>
           <Input placeholder='Date' />
-        </ProjectField>
-        <ProjectField label='Shipping company'>
+        </Field>
+        <Field label='Shipping company'>
           <Input placeholder='Date' />
-        </ProjectField>
+        </Field>
       </div>
     </div>
   )

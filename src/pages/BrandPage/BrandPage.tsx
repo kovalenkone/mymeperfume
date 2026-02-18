@@ -4,7 +4,7 @@ import { Button } from '@/shared/ui/Button'
 import { Link } from 'react-router-dom'
 
 import image from '@/assets/images/brand.jpg'
-import { ClientPath } from '@/shared/constants/routes.constant'
+import { AppPath } from '@/shared/constants/routes.constant'
 
 const BrandPage = () => {
   return (
@@ -20,7 +20,7 @@ const BrandPage = () => {
       </div>
       <div className='grid grid-cols-4'>
         <Link
-          to={ClientPath.Project('1')}
+          to={AppPath.Project('1')}
           className='group relative flex aspect-square w-full flex-col justify-end overflow-hidden rounded-lg'
         >
           <img

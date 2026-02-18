@@ -1,7 +1,5 @@
 const AuthCode = () => {
-  return (
-    
-  )
+  return <div>12</div>
 }
 
 export { AuthCode }

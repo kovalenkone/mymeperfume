@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dnd-kit/helpers": "^0.3.1",
+    "@dnd-kit/react": "^0.3.1",
     "@hookform/resolvers": "^5.2.2",
-    "@tailwindcss/vite": "^4.1.15",
+    "@ tailwindcss/vite": "^4.1.15",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",
     "radix-ui": "^1.4.3",

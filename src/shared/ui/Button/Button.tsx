@@ -21,7 +21,7 @@ const Button = ({
   const Comp = asChild ? Slot.Root : 'button'
 
   const buttonStyles = clsx(
-    'rounded-md font-medium text-md flex items-center gap-2 transition',
+    'rounded-md font-medium text-md flex items-center gap-2 transition font-secondary',
     {
       'bg-primary text-foreground-secondary hover:bg-primary-muted':
         variant === 'primary',
@@ -29,7 +29,8 @@ const Button = ({
         variant === 'accent',
       'text-accent border border-accent hover:text-foreground-secondary hover:bg-accent-muted active:bg-accent-dark active:text-foreground-secondary':
         variant === 'outline',
-      'bg-red text-red': variant === 'danger',
+      'border border-danger hover:text-foreground-secondary hover:bg-danger text-danger':
+        variant === 'danger',
       'px-3 h-10 text-sm': size === 'sm',
       'px-6 h-11 text-sm': size === 'md',
       'px-6 h-12 text-md': size === 'lg',

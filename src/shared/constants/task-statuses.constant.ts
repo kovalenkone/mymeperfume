@@ -27,6 +27,6 @@ export const TASK_STATUSES: ITaskStatus[] = [
     icon: BoxIcon,
     label: 'Shipping',
     value: 'shipping',
-    color: 'blue',
+    color: 'green',
   },
 ]

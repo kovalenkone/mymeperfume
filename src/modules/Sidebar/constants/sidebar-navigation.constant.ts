@@ -1,4 +1,4 @@
-import { AdminPath } from '@/shared/constants/routes.constant'
+import { AppPath } from '@/shared/constants/routes.constant'
 import { ArchiveIcon } from '@/shared/icons/ArchiveIcon'
 import { ProjectsIcon } from '@/shared/icons/ProjectsIcon'
 import { UserIcon } from '@/shared/icons/UserIcon'
@@ -15,26 +15,26 @@ export const SIDEBAR_NAVIGATION: ISidebarNavigation[] = [
   {
     icon: UsersIcon,
     label: 'Users',
-    href: AdminPath.Users,
+    href: AppPath.Users,
   },
   {
     icon: ProjectsIcon,
     label: 'Projects',
-    href: AdminPath.Projects,
+    href: AppPath.Projects,
   },
   {
     icon: ArchiveIcon,
     label: 'Archived projects',
-    href: AdminPath.Archive,
+    href: AppPath.Archive,
   },
   {
     icon: UsersIcon,
     label: 'Staff',
-    href: AdminPath.Staff,
+    href: AppPath.Staff,
   },
   {
     icon: UserIcon,
     label: 'Profile',
-    href: AdminPath.Profile,
+    href: AppPath.Profile,
   },
 ]

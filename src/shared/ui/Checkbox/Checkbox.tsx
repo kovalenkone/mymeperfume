@@ -1,4 +1,4 @@
-import { CheckedIcon } from '@/assets/icons/CheckedIcon'
+// import { CheckedIcon } from '@/assets/icons/CheckedIcon'
 import clsx from 'clsx'
 import type { InputHTMLAttributes } from 'react'
 
@@ -41,7 +41,7 @@ const Checkbox = ({
         onChange={onChange}
         {...props}
       />
-      <span className={checkboxStyles}>{checked && <CheckedIcon />}</span>
+      <span className={checkboxStyles}></span>
       {label && <span className='tracking-tightest select-none'>{label}</span>}
     </label>
   )
