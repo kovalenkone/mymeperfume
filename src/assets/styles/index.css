@@ -18,6 +18,7 @@
   --color-input: #f9f9f9;
 
   --color-accent: #4a90e2;
+  --color-accent-light: #e3f2fd;
   --color-accent-muted: #357abd;
   --color-accent-dark: #2e6da4;
   --color-danger: #d90429;
@@ -27,6 +28,7 @@
   --color-status-turquoise: #1dd3b0;
   --color-status-green: #4dd222;
   --color-status-orange: #ffa62b;
+  --color-status-grey: #dee2e6;
 
   /* Font size and line height */
   --text-xxs: 12px;
@@ -52,6 +54,8 @@
   --shadow-task: 0 2px 8px 0 rgba(18, 17, 19, 0.15);
   --shadow-brand: 0 2px 8px 0 rgba(18, 17, 19, 0.05);
   --shadow-brand-hover: 0 2px 8px 0 rgba(18, 17, 19, 0.15);
+  --shadow-chat: 0 2px 10px 0 rgba(18, 17, 19, 0.1);
+  --shadow-chat-trigger: 0 2px 10px 0 rgba(18, 17, 19, 0.15);
 
   --color-brand-gradient: linear-gradient(
     180deg,

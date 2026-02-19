@@ -1,5 +1,6 @@
 import type { JSX } from 'react'
 import { ProjectAboutForm } from '../components/ProjectAboutForm'
+import { ProjectCollection } from '../components/ProjectCollection'
 
 interface IProjectTabs {
   label: string
@@ -16,7 +17,7 @@ export const PROJECTS_TABS: IProjectTabs[] = [
   {
     label: 'Regulatory Data collection',
     value: 'collection',
-    component: ProjectAboutForm,
+    component: ProjectCollection,
   },
   {
     label: 'Packaging docs',

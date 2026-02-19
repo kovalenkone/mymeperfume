@@ -27,14 +27,14 @@ const Button = ({
         variant === 'primary',
       'bg-accent text-foreground-secondary hover:bg-accent-muted active:bg-accent-dark':
         variant === 'accent',
-      'text-accent border border-accent hover:text-foreground-secondary hover:bg-accent-muted active:bg-accent-dark active:text-foreground-secondary':
+      'text-accent border border-accent hover:text-foreground-secondary hover:bg-accent-muted hover:border-accent-muted active:bg-accent-dark active:text-foreground-secondary':
         variant === 'outline',
       'border border-danger hover:text-foreground-secondary hover:bg-danger text-danger':
         variant === 'danger',
       'px-3 h-10 text-sm': size === 'sm',
       'px-6 h-11 text-sm': size === 'md',
       'px-6 h-12 text-md': size === 'lg',
-      'w-full': stretch,
+      'w-full justify-center': stretch,
     },
   )
 

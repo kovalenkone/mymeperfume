@@ -8,6 +8,12 @@ interface IStatusBarProps {
   onChange: (value: string) => void
 }
 
+const statusColors = {
+  green: 'bg-status-green',
+  grey: 'bg-status-grey',
+  blue: 'bg-status-blue',
+}
+
 const StatusBar = ({ statuses, value, onChange }: IStatusBarProps) => {
   return (
     <div className='bg-background relative flex h-10 w-max overflow-hidden rounded-[20px]'>
@@ -23,7 +29,10 @@ const StatusBar = ({ statuses, value, onChange }: IStatusBarProps) => {
             {isActive && (
               <motion.span
                 layoutId='floating-indicator'
-                className={`absolute inset-0 rounded-[20px] bg-status-${status.color}`}
+                className={clsx(
+                  'absolute inset-0 rounded-[20px]',
+                  statusColors[status.color],
+                )}
                 transition={{
                   type: 'spring',
                   stiffness: 400,

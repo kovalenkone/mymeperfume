@@ -17,7 +17,7 @@ const Project = () => {
           ))}
         </Tabs.List>
         {PROJECTS_TABS.map(tab => (
-          <Tabs.Content key={tab.value} className='p-8' value={tab.value}>
+          <Tabs.Content key={tab.value} value={tab.value}>
             <tab.component />
           </Tabs.Content>
         ))}

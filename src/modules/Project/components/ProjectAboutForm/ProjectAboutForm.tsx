@@ -1,5 +1,6 @@
 import { StatusBar } from '@/components/StatusBar'
 import { TASK_STATUSES } from '@/shared/constants/task-statuses.constant'
+import { DatePicker } from '@/shared/ui/DatePicker'
 import { Field } from '@/shared/ui/Field'
 import { Input } from '@/shared/ui/Input/Input'
 import { useState } from 'react'
@@ -27,7 +28,7 @@ const ProjectAboutForm = () => {
           <Input placeholder='Manager' />
         </Field>
         <Field label='Filling start date'>
-          <Input placeholder='Date' />
+          <DatePicker />
         </Field>
         <Field label='Filling end date'>
           <Input placeholder='Date' />

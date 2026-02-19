@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container'
+import { Chat } from '@/modules/Chat'
 import { Project } from '@/modules/Project'
 import { ArchiveIcon } from '@/shared/icons/ArchiveIcon'
 import { CheckIcon } from '@/shared/icons/CheckIcon'
@@ -29,6 +30,7 @@ const ProjectPage = () => {
         </div>
       </div>
       <Project />
+      <Chat />
     </Container>
   )
 }
