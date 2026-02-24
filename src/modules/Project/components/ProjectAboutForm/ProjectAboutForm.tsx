@@ -9,7 +9,7 @@ const ProjectAboutForm = () => {
   const [status, setStatus] = useState('preparation')
 
   return (
-    <div className='flex max-w-[996px] flex-col gap-6'>
+    <div className='flex max-w-[996px] flex-col gap-6 p-8'>
       <Field label='Project Stage'>
         <StatusBar
           value={status}

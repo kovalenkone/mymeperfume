@@ -1,4 +1,6 @@
+import { STATUS_COLORS } from '@/shared/constants/status-colors.constant'
 import { useDroppable } from '@dnd-kit/react'
+import clsx from 'clsx'
 import type { PropsWithChildren } from 'react'
 import type { IKanbanColumn } from '../../constants/kanban-columns.constant'
 
@@ -22,9 +24,17 @@ const KanbanColumn = ({
   return (
     <div className='flex flex-col gap-6' ref={ref}>
       <div
-        className={`border-status-${board.color} flex h-11 items-center gap-2 border-b-4`}
+        className={clsx(
+          `flex h-11 items-center gap-2 border-b-4`,
+          STATUS_COLORS[board.color].border,
+        )}
       >
-        <p className={`text-status-${board.color} text-lg font-bold uppercase`}>
+        <p
+          className={clsx(
+            `text-lg font-bold uppercase`,
+            STATUS_COLORS[board.color].text,
+          )}
+        >
           {board.title}
         </p>
         <span className='text-muted text-xs'>({total})</span>

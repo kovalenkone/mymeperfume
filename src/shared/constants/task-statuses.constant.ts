@@ -15,18 +15,18 @@ export const TASK_STATUSES: ITaskStatus[] = [
     icon: ClockIcon,
     label: 'In production',
     value: 'production',
-    color: 'blue',
+    color: 'turquoise',
   },
   {
     icon: CheckIcon,
     label: 'Ready',
     value: 'ready',
-    color: 'blue',
+    color: 'green',
   },
   {
     icon: BoxIcon,
     label: 'Shipping',
     value: 'shipping',
-    color: 'green',
+    color: 'orange',
   },
 ]

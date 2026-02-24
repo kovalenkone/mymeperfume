@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge'
 interface ButtonProps extends ComponentProps<'button'> {
   asChild?: boolean
   size?: 'sm' | 'md' | 'lg'
-  variant?: 'primary' | 'accent' | 'outline' | 'danger'
+  variant?: 'primary' | 'accent' | 'outline' | 'danger' | 'grey'
   stretch?: boolean
 }
 
@@ -31,6 +31,7 @@ const Button = ({
         variant === 'outline',
       'border border-danger hover:text-foreground-secondary hover:bg-danger text-danger':
         variant === 'danger',
+      'bg-[rgba(242,243,244,1)]': variant === 'grey',
       'px-3 h-10 text-sm': size === 'sm',
       'px-6 h-11 text-sm': size === 'md',
       'px-6 h-12 text-md': size === 'lg',

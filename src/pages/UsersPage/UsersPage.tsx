@@ -29,7 +29,11 @@ const UsersPage = () => {
         </Table.Head>
         <Table.Body>
           <Table.Row>
-            <Table.Cell>email@iasmos.fr</Table.Cell>
+            <Table.Cell>
+              <span className='text-accent text-lg underline underline-offset-4'>
+                email@iasmos.fr
+              </span>
+            </Table.Cell>
             <Table.Cell>Jhon</Table.Cell>
             <Table.Cell>Jhonson</Table.Cell>
             <Table.Cell>Summer breeze</Table.Cell>

@@ -1,6 +1,8 @@
+import { STATUS_COLORS } from '@/shared/constants/status-colors.constant'
 import type { ITaskStatus } from '@/shared/types/task-status.type'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
+import { useId } from 'react'
 
 interface IStatusBarProps {
   statuses: ITaskStatus[]
@@ -8,15 +10,11 @@ interface IStatusBarProps {
   onChange: (value: string) => void
 }
 
-const statusColors = {
-  green: 'bg-status-green',
-  grey: 'bg-status-grey',
-  blue: 'bg-status-blue',
-}
-
 const StatusBar = ({ statuses, value, onChange }: IStatusBarProps) => {
+  const groupId = useId()
+
   return (
-    <div className='bg-background relative flex h-10 w-max overflow-hidden rounded-[20px]'>
+    <div className='bg-background relative flex h-10 w-max shrink-0 overflow-hidden rounded-[20px]'>
       {statuses.map(status => {
         const isActive = status.value === value
 
@@ -28,10 +26,10 @@ const StatusBar = ({ statuses, value, onChange }: IStatusBarProps) => {
           >
             {isActive && (
               <motion.span
-                layoutId='floating-indicator'
+                layoutId={`floating-indicator-${groupId}`}
                 className={clsx(
                   'absolute inset-0 rounded-[20px]',
-                  statusColors[status.color],
+                  STATUS_COLORS[status.color].bg,
                 )}
                 transition={{
                   type: 'spring',

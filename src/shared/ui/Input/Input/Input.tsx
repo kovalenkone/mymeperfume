@@ -3,20 +3,24 @@ import { forwardRef, type InputHTMLAttributes } from 'react'
 import type { FieldError } from 'react-hook-form'
 import { twMerge } from 'tailwind-merge'
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+  size?: 'md' | 'lg'
   label?: string
   error?: FieldError
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, id, error, className, ...props }, ref) => {
+  ({ label, id, error, size = 'lg', className, ...props }, ref) => {
     const inputStyles = clsx(
       'placeholder:text-muted rounded-md border w-full bg-input px-4 h-12 border-border text-md transition focus-visible:bg-background-secondary focus-visible:border-primary',
       { 'border-red ': !!error },
+      { 'h-12': size === 'lg' },
+      { 'h-10': size === 'md' },
     )
 
     return (
-      <div className='flex flex-col gap-0.5'>
+      <div className='flex w-full flex-col gap-0.5'>
         <div className='relative flex w-full flex-col gap-3'>
           {label && (
             <label className='text-muted text-md font-medium' htmlFor={id}>
