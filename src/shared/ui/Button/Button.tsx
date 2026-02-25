@@ -31,7 +31,8 @@ const Button = ({
         variant === 'outline',
       'border border-danger hover:text-foreground-secondary hover:bg-danger text-danger':
         variant === 'danger',
-      'bg-[rgba(242,243,244,1)]': variant === 'grey',
+      'bg-[rgba(242,243,244,1)] hover:bg-[rgba(222,226,230,1)]':
+        variant === 'grey',
       'px-3 h-10 text-sm': size === 'sm',
       'px-6 h-11 text-sm': size === 'md',
       'px-6 h-12 text-md': size === 'lg',

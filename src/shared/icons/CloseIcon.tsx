@@ -16,7 +16,7 @@ const CloseIcon = ({
     >
       <path
         d='M17.6568 17.6569L12 12M12 12L6.34313 6.34315M12 12L17.6568 6.34315M12 12L6.34313 17.6569'
-        stroke='black'
+        stroke='currentColor'
         stroke-width='1.5'
         stroke-linecap='square'
       />

@@ -20,11 +20,11 @@ const Modal = ({
   return (
     <Dialog.Root open={opened} onOpenChange={onOpenedChange}>
       <Dialog.Portal>
-        <Dialog.Overlay className='animate-overlay-show fixed inset-0 z-40 bg-black/25' />
-        <Dialog.Content className='animate-content-show fixed top-[50%] left-[50%] z-50 w-[428px] -translate-x-[50%] -translate-y-[50%] rounded-xl bg-white p-6'>
+        <Dialog.Overlay className='animate-overlay-show animate-fade-in fixed inset-0 z-40 bg-black/25' />
+        <Dialog.Content className='animate-content-show animate-fade-in fixed top-[50%] left-[50%] z-50 w-[428px] -translate-x-[50%] -translate-y-[50%] rounded-xl bg-white p-6'>
           <Dialog.Close asChild>
-            <button className='absolute top-2 right-2 flex size-6 items-center justify-center-safe'>
-              <CloseIcon className='size-5' />
+            <button className='text-muted absolute top-2 right-2 flex size-6 items-center justify-center hover:text-[#ADB5BD]'>
+              <CloseIcon className='size-5 transition' />
             </button>
           </Dialog.Close>
           <div className='flex flex-col gap-8'>
