@@ -1,34 +1,19 @@
-import { StatusBar } from '@/components/StatusBar'
-import { FILE_STATUSES } from '@/shared/constants/file-statuses.constant'
+import { FileField } from '@/components/FileField'
 import { CloudIcon } from '@/shared/icons/CloudIcon'
+import { DownloadIcon } from '@/shared/icons/DownloadIcon'
 import { TrashIcon } from '@/shared/icons/TrashIcon'
 import { Button } from '@/shared/ui/Button'
-import { Input } from '@/shared/ui/Input/Input'
 import { useState } from 'react'
 
 const FilesBlock = () => {
   const [status, setStatus] = useState('waiting')
+  const [file, setFile] = useState<File | null>(null)
 
   return (
     <div className='flex flex-col'>
       <div className='border-border border-b p-8'>
         <div className='flex flex-col gap-4'>
-          <div className='flex items-center gap-6'>
-            <Input defaultValue={'MSDS'} readOnly />
-            <StatusBar
-              statuses={FILE_STATUSES}
-              value={status}
-              onChange={setStatus}
-            />
-            <div className='flex items-center gap-4'>
-              <Button variant='outline'>
-                <CloudIcon className='size-5' /> Download file
-              </Button>
-              <span className='text-muted text-sm'>
-                MSDS_1.pdf (last update 10.11.25)
-              </span>
-            </div>
-          </div>
+          <FileField status={status} onStatusChange={setStatus} file={file} />
         </div>
       </div>
       <div className='grid grid-cols-[2fr_1fr]'>
@@ -50,36 +35,38 @@ const FilesBlock = () => {
           <h3 className='mb-4 text-xl font-bold'>Documents</h3>
           <div className='mb-6 flex flex-col gap-2'>
             <div className='flex items-center justify-between'>
-              <a href='' download className='text-muted text-lg'>
+              <span className='text-muted text-lg'>
                 document_1.pdf (125 кб)
-              </a>
-              <button>
-                <TrashIcon className='text-muted size-5' />
-              </button>
+              </span>
+              <div className='flex items-center gap-4'>
+                <a
+                  href=''
+                  download
+                  className='text-muted flex size-6 items-center justify-center transition hover:text-[#ADB5BD]'
+                >
+                  <DownloadIcon className='size-5' />
+                </a>
+                <button className='text-muted flex size-6 items-center justify-center transition hover:text-[#ADB5BD]'>
+                  <TrashIcon className='size-5' />
+                </button>
+              </div>
             </div>
             <div className='flex items-center justify-between'>
-              <a href='' download className='text-muted text-lg'>
+              <span className='text-muted text-lg'>
                 document_1.pdf (125 кб)
-              </a>
-              <button>
-                <TrashIcon className='text-muted size-5' />
-              </button>
-            </div>
-            <div className='flex items-center justify-between'>
-              <a href='' download className='text-muted text-lg'>
-                document_1.pdf (125 кб)
-              </a>
-              <button>
-                <TrashIcon className='text-muted size-5' />
-              </button>
-            </div>
-            <div className='flex items-center justify-between'>
-              <a href='' download className='text-muted text-lg'>
-                document_1.pdf (125 кб)
-              </a>
-              <button>
-                <TrashIcon className='text-muted size-5' />
-              </button>
+              </span>
+              <div className='flex items-center gap-4'>
+                <a
+                  href=''
+                  download
+                  className='text-muted flex size-6 items-center justify-center transition hover:text-[#ADB5BD]'
+                >
+                  <DownloadIcon className='size-5' />
+                </a>
+                <button className='text-muted flex size-6 items-center justify-center transition hover:text-[#ADB5BD]'>
+                  <TrashIcon className='size-5' />
+                </button>
+              </div>
             </div>
           </div>
           <div className='flex items-center gap-4'>
